@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Data </title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<a href="/about/">About</a>
+<a href="/contract/">Contact</a>
+
+
+    <h2>People List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for people in peoples %}
+                <tr>
+                    <td>{{ people.name }}</td>
+                    <td>{{ people.age }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
